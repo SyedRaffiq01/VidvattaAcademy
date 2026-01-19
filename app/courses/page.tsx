@@ -274,7 +274,7 @@ export default function Courses() {
                   <h3 className="text-2xl font-serif font-bold text-vedic-maroon mb-2">
                     Registration Fee
                   </h3>
-                  <p className="text-4xl font-bold text-vedic-maroon mb-2">INR 500/-</p>
+                  <p className="text-4xl font-bold text-vedic-maroon mb-2">INR 1000/-</p>
                   <p className="text-gray-600">One-time registration fee</p>
                 </div>
               </div>
