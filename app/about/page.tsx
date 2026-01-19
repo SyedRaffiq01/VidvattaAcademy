@@ -31,11 +31,11 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-vedic-maroon mb-6">
-              About Vidvatta Academy
+              Empowering Young Minds with Vedic Excellence
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Where ancient wisdom meets modern education, creating confident learners 
-              and skilled mathematicians for tomorrow's world.
+              We blend ancient wisdom with modern teaching to unlock your child's mathematical potential 
+              and build confidence that lasts a lifetime.
             </p>
           </div>
         </div>

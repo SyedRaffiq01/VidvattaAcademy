@@ -47,8 +47,8 @@ export default function SummerCamps() {
               Happy Trails Summer Camp
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Make this summer productive and fun! Join our exciting summer camp designed 
-              to combine learning with enjoyment.
+              Turn this summer into a learning adventure! Our exciting camp combines fun activities 
+              with valuable math skills that boost confidence and keep kids engaged.
             </p>
             <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md">
               <Users className="w-5 h-5 text-vedic-green" />
@@ -209,14 +209,15 @@ export default function SummerCamps() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon to-vedic-green text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-green to-vedic-maroon text-white relative overflow-hidden">
+        <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-            Reserve Your Spot Today!
+            Secure Your Child's Spot Now!
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Limited seats available. Don't miss out on this opportunity to give your child 
-            a fun-filled, productive summer experience.
+            Limited seats available. Give your child a summer filled with learning, fun, 
+            and confidence-building experiences they'll remember forever.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

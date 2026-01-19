@@ -409,13 +409,15 @@ export default function Contact() {
       </section>
 
       {/* Quick Action CTA */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon to-vedic-green text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-green to-vedic-maroon text-white relative overflow-hidden">
+        <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-            Ready to Get Started?
+            Ready to Transform Your Child's Future?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Call us now or send us a message. We're here to answer all your questions!
+            Let's start the conversation! Call us or send a message—we're here to answer 
+            all your questions and help your child begin their journey to excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

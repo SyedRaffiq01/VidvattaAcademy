@@ -38,6 +38,11 @@ const config: Config = {
           maroon: '#8B0000',
           gold: '#D4AF37',
         },
+        accent: {
+          warm: '#F4E3D7',
+          red: '#A33E3E',
+          yellow: '#E5A73E',
+        },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],

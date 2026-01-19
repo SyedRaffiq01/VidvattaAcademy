@@ -27,11 +27,11 @@ export default function Classes() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-vedic-maroon mb-6">
-              Online & Offline Classes
+              Learn Your Way: Online or In-Person
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Choose the learning mode that works best for your child. 
-              Both options offer comprehensive training with certified instructors.
+              Choose the learning mode that fits your family. Whether online or offline, 
+              your child gets the same exceptional training with our certified instructors.
             </p>
           </div>
         </div>
@@ -244,13 +244,14 @@ export default function Classes() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon to-vedic-green text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-green to-vedic-maroon text-white relative overflow-hidden">
+        <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-            Ready to Start Learning?
+            Ready to Begin Your Child's Transformation?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Contact us to discuss the best class option and timing for your child
+            Let's discuss the perfect class option and timing to unlock your child's mathematical potential
           </p>
           <Link
             href="/contact"

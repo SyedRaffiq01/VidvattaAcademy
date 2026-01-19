@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Calculator, BookOpen, Users, Clock, Target, Brain, Award, CheckCircle } from 'lucide-react';
+import { Calculator, BookOpen, Users, Clock, Target, Brain, Award, CheckCircle, FileText } from 'lucide-react';
 
 export default function Courses() {
   const abacusBenefits = [
@@ -27,11 +27,11 @@ export default function Courses() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-vedic-maroon mb-6">
-              Our Courses
+              Transform Your Child's Math Journey
             </h1>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Comprehensive programs designed to build strong mathematical foundations 
-              and unlock your child's full potential
+              Choose from our proven programs that build strong foundations, boost confidence, 
+              and unlock your child's full mathematical potential.
             </p>
           </div>
         </div>
@@ -71,6 +71,13 @@ export default function Courses() {
                     <div>
                       <p className="font-semibold text-gray-800">Duration</p>
                       <p className="text-gray-600">Structured program with progressive levels</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <FileText className="w-5 h-5 text-vedic-green mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-800">Certification</p>
+                      <p className="text-gray-600">Certificate of completion awarded upon program completion</p>
                     </div>
                   </div>
                 </div>
@@ -173,6 +180,13 @@ export default function Courses() {
                       <p className="text-gray-600">Competitive exam preparation & foundation building</p>
                     </div>
                   </div>
+                  <div className="flex items-start space-x-3">
+                    <FileText className="w-5 h-5 text-vedic-green mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-800">Certification</p>
+                      <p className="text-gray-600">Certificate of completion awarded upon program completion</p>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-serif font-semibold text-vedic-maroon mb-4">
                   Key Benefits
@@ -198,13 +212,15 @@ export default function Courses() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon to-vedic-green text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-green to-vedic-maroon text-white relative overflow-hidden">
+        <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-            Not Sure Which Course is Right?
+            Unsure Which Course Fits Your Child?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Book a free consultation session and let our experts guide you to the perfect program for your child
+            Book a free consultation and let our experts guide you to the perfect program 
+            that will unlock your child's mathematical excellence.
           </p>
           <Link
             href="/contact#demo"
