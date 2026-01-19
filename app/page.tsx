@@ -134,52 +134,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Batch Information Banner */}
-      <section className="py-12 bg-gradient-to-r from-vedic-green via-vedic-maroon to-vedic-green text-white relative overflow-hidden">
+      {/* Final CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight via-vedic-greenLight to-vedic-green text-white relative overflow-hidden">
         <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>
-            <div className="max-w-3xl mx-auto">
-              <div className="flex items-center justify-center mb-4">
-                <Calendar className="w-6 h-6 mr-3" />
-                <h3 className="text-xl md:text-2xl font-serif font-semibold">
-                  Next Batch Starting Soon!
-                </h3>
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center justify-center mb-6">
+                <Calendar className="w-8 h-8 mr-3 text-saffron-300" />
+                <h2 className="text-3xl md:text-4xl font-serif font-bold">
+                  Ready to Transform Your Child&apos;s Future?
+                </h2>
               </div>
-              <p className="text-lg md:text-xl mb-6 text-white/95">
-                New batches of Abacus and Vedic Maths classes are commencing regularly.
+              <p className="text-xl md:text-2xl mb-4 text-white/95 font-medium">
+                Next Batch Starting Soon!
               </p>
-              <p className="text-base md:text-lg mb-8 text-white/90">
-                Enroll now to secure your child&apos;s spot in the upcoming batch!
+              <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
+                Join hundreds of students who have discovered the joy of mathematics. 
+                New batches are commencing regularly—enroll now to secure your child&apos;s spot 
+                and unlock their true potential.
               </p>
-              <Link
-                href="/contact"
-                className="inline-block bg-saffron-600 hover:bg-saffron-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-                Enroll Your Kid Now!
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-saffron-600 hover:bg-saffron-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Enroll Now
+                </Link>
+                <Link
+                  href="/contact#demo"
+                  className="inline-block bg-white/20 hover:bg-white/30 text-white px-10 py-4 rounded-full text-lg font-semibold border-2 border-white transition-all duration-300 transform hover:scale-105"
+                >
+                  Book Free Trial Class
+                </Link>
+              </div>
             </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-green to-vedic-maroon text-white relative overflow-hidden">
-        <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
-              Ready to Transform Your Child&apos;s Future?
-            </h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Join hundreds of students who have discovered the joy of mathematics and unlocked their true potential
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-saffron-600 hover:bg-saffron-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-            </Link>
           </ScrollReveal>
         </div>
       </section>

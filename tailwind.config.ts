@@ -35,7 +35,9 @@ const config: Config = {
         },
         vedic: {
           green: '#2D5016',
+          greenLight: '#3A6B1F',
           maroon: '#8B0000',
+          maroonLight: '#A52D2D',
           gold: '#D4AF37',
         },
         accent: {
