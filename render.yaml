@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: vidvatta-academy
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: SMTP_EMAIL
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+    # Render will automatically detect Next.js and use the correct settings
