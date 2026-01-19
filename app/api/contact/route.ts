@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
               In the meantime, feel free to reach out to us directly:
             </p>
             <ul style="color: #666; line-height: 1.8;">
-              <li><strong>Phone:</strong> +91 78925 05452 / +91 98869 31521</li>
+              <li><strong>Phone:</strong> +91 78925 05452</li>
               <li><strong>Email:</strong> Vidvatta.academy@gmail.com</li>
               <li><strong>Location:</strong> Arehalli, Uttarahalli, Bangalore</li>
             </ul>

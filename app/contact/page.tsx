@@ -67,7 +67,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 78925 05452', '+91 98869 31521'],
+      details: ['+91 78925 05452'],
       link: 'tel:+917892505452',
       color: 'vedic-green',
     },
@@ -190,7 +190,8 @@ export default function Contact() {
                     <option value="demo">Book Free Demo Class</option>
                     <option value="enrollment">Enrollment</option>
                     <option value="summer-camp">Summer Camp</option>
-                    <option value="online">Online Classes</option>
+                    <option value="online-abacus">Online Class Abacus</option>
+                    <option value="online-vedic">Online Class Vedic Maths</option>
                     <option value="offline">Offline Classes</option>
                   </select>
                 </div>
@@ -306,7 +307,8 @@ export default function Contact() {
                       <option value="vedic-math">Vedic Mathematics</option>
                       <option value="both">Both Programs</option>
                       <option value="summer-camp">Summer Camp</option>
-                      <option value="online">Online Classes</option>
+                      <option value="online-abacus">Online Class Abacus</option>
+                      <option value="online-vedic">Online Class Vedic Maths</option>
                       <option value="offline">Offline Classes</option>
                     </select>
                   </div>
@@ -416,7 +418,7 @@ export default function Contact() {
             Ready to Transform Your Child's Future?
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Let's start the conversation! Call us or send a message—we're here to answer 
+            Let's start the conversation! Call us or send a message - we're here to answer 
             all your questions and help your child begin their journey to excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

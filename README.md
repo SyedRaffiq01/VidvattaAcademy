@@ -200,5 +200,5 @@ The contact form sends emails to `Vidvatta.academy@gmail.com` by default. To cha
 
 For questions or support, contact:
 - Email: Vidvatta.academy@gmail.com
-- Phone: +91 78925 05452, +91 98869 31521
+- Phone: +91 78925 05452
 - Location: Arehalli, Uttarahalli, Bangalore

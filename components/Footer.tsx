@@ -70,9 +70,6 @@ export default function Footer() {
                   <a href="tel:+917892505452" className="hover:text-vedic-gold transition-colors block font-medium">
                     +91 78925 05452
                   </a>
-                  <a href="tel:+919886931521" className="hover:text-vedic-gold transition-colors block font-medium mt-1">
-                    +91 98869 31521
-                  </a>
                 </div>
               </li>
               <li className="flex items-start space-x-2.5">

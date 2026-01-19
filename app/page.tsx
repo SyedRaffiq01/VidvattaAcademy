@@ -43,7 +43,7 @@ export default function Home() {
                 Master Maths with Ancient Wisdom + Modern Techniques
               </p>
               <p className="text-lg md:text-xl text-gray-700 mb-10 leading-relaxed">
-                For Students Class 1 to 10 — Flexible Online & Offline Batches
+                For Students Class 1 to 10 - Flexible Online & Offline Batches
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -151,7 +151,7 @@ export default function Home() {
               </p>
               <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
                 Join hundreds of students who have discovered the joy of mathematics. 
-                New batches are commencing regularly—enroll now to secure your child&apos;s spot 
+                New batches are commencing regularly - enroll now to secure your child&apos;s spot 
                 and unlock their true potential.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
