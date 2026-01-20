@@ -155,15 +155,23 @@ vidvatta-academy/
 
 ## 📧 Contact Form Setup
 
-The contact form is fully functional and sends emails in two ways:
+The contact form uses **FormSubmit** (https://formsubmit.co) - a free, no-backend solution perfect for static websites.
 
-1. **To Academy**: Sends inquiry details to `Vidvatta.academy@gmail.com`
-2. **To User**: Sends confirmation email to the person who submitted the form
+### How It Works:
+- Submits directly to `Vidvatta.academy@gmail.com`
+- No server-side code or environment variables needed
+- Works on any static hosting (Vercel, Netlify, GitHub Pages, etc.)
+- Automatic email notifications for new inquiries
 
-Make sure to:
-- Set up `.env.local` with your Gmail credentials
-- Use a Gmail App Password (not your regular password)
-- Test the form after deployment
+### Features:
+- ✅ AJAX submission (no page reload)
+- ✅ Form validation
+- ✅ Success/error handling
+- ✅ Automatic email formatting
+- ✅ No backend required
+
+### Optional Enhancements:
+To enable reCAPTCHA spam protection, change `_captcha: 'false'` to `'true'` in `app/contact/page.tsx`
 
 ## 🔧 Customization
 
@@ -185,8 +193,8 @@ To add certificate photos to the gallery:
 
 **Note**: The gallery page currently shows only certificate photos. The videos and learning moments sections are hidden but can be enabled by uncommenting the respective sections in `app/gallery/page.tsx`.
 
-### Email Configuration
-The contact form sends emails to `Vidvatta.academy@gmail.com` by default. To change this, edit `app/api/contact/route.ts`.
+### Contact Form Email
+The contact form sends emails to `Vidvatta.academy@gmail.com` via FormSubmit. To change the recipient email, update the email address in `app/contact/page.tsx` in the fetch URL.
 
 ## 📱 Features to Enhance (Future)
 

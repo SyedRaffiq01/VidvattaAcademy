@@ -9,44 +9,79 @@ export default function Contact() {
     email: '',
     phone: '',
     studentGrade: '',
-    interest: '',
     message: '',
-    inquiryType: 'general',
+    inquiryType: '',
   });
 
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [phoneError, setPhoneError] = useState<string>('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Validate Indian phone number
+  const validateIndianPhone = (phone: string): boolean => {
+    // Remove all spaces, dashes, and other non-digit characters except +
+    const cleaned = phone.replace(/[\s-]/g, '');
+    
+    // Patterns for Indian phone numbers:
+    // +91 followed by 10 digits (starting with 6-9)
+    // 0 followed by 10 digits (starting with 6-9) - landline format
+    // 10 digits starting with 6-9 (mobile)
+    const patterns = [
+      /^\+91[6-9]\d{9}$/,           // +91 9876543210
+      /^0[6-9]\d{9}$/,               // 09876543210 (landline)
+      /^[6-9]\d{9}$/,                // 9876543210 (mobile)
+    ];
+    
+    return patterns.some(pattern => pattern.test(cleaned));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    // Validate phone number before submission
+    if (!validateIndianPhone(formData.phone)) {
+      setPhoneError('Please enter a valid Indian phone number (10 digits, starting with 6-9, or with +91)');
+      return;
+    }
+    
     setFormStatus('submitting');
+    setPhoneError('');
+    
+    const form = e.currentTarget;
+    const formDataToSubmit = new FormData(form);
+    
+    // Add FormSubmit specific fields
+    formDataToSubmit.append('_subject', `New Inquiry: ${formData.inquiryType} - ${formData.name}`);
+    formDataToSubmit.append('_template', 'table');
+    formDataToSubmit.append('_captcha', 'false'); // Set to 'true' if you want to enable reCAPTCHA later
+    formDataToSubmit.append('_next', window.location.href + '?success=true'); // Redirect to same page with success param
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formsubmit.co/ajax/65bb2c2380f78f306bfec626dedb410b', {
         method: 'POST',
+        body: formDataToSubmit,
         headers: {
-          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok && data.success) {
         setFormStatus('success');
         setFormData({
           name: '',
           email: '',
           phone: '',
           studentGrade: '',
-          interest: '',
           message: '',
-          inquiryType: 'general',
+          inquiryType: '',
         });
+        setPhoneError('');
         setTimeout(() => setFormStatus('idle'), 5000);
       } else {
         setFormStatus('error');
         setTimeout(() => setFormStatus('idle'), 5000);
-        alert(data.error || 'Failed to submit inquiry. Please try again.');
+        alert(data.message || 'Failed to submit inquiry. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -57,10 +92,22 @@ export default function Contact() {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const value = e.target.value;
+    const name = e.target.name;
+    
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
+    
+    // Validate phone number in real-time
+    if (name === 'phone') {
+      if (value && !validateIndianPhone(value)) {
+        setPhoneError('Please enter a valid Indian phone number');
+      } else {
+        setPhoneError('');
+      }
+    }
   };
 
   const contactMethods = [
@@ -173,10 +220,10 @@ export default function Contact() {
 
             <div className="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-sandalwood-100">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Inquiry Type */}
+                {/* Inquiry Type / Interested In */}
                 <div>
                   <label htmlFor="inquiryType" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Inquiry Type *
+                    Inquiry Type / Interested In *
                   </label>
                   <select
                     id="inquiryType"
@@ -186,12 +233,15 @@ export default function Contact() {
                     required
                     className="w-full px-4 py-3 border border-sandalwood-200 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-transparent outline-none"
                   >
+                    <option value="">Select Inquiry Type</option>
                     <option value="general">General Inquiry</option>
                     <option value="demo">Book Free Demo Class</option>
-                    <option value="enrollment">Enrollment</option>
+                    <option value="enrollment-abacus">Enrollment - Abacus Program</option>
+                    <option value="enrollment-vedic">Enrollment - Vedic Mathematics</option>
+                    <option value="enrollment-both">Enrollment - Both Programs</option>
                     <option value="summer-camp">Summer Camp</option>
-                    <option value="online-abacus">Online Class Abacus</option>
-                    <option value="online-vedic">Online Class Vedic Maths</option>
+                    <option value="online-abacus">Abacus - Online Class </option>
+                    <option value="online-vedic">Vedic Maths - Online Class </option>
                     <option value="offline">Offline Classes</option>
                   </select>
                 </div>
@@ -231,10 +281,17 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 border border-sandalwood-200 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-transparent outline-none"
-                        placeholder="+91 12345 67890"
+                        className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent outline-none ${
+                          phoneError 
+                            ? 'border-red-300 focus:ring-red-500' 
+                            : 'border-sandalwood-200 focus:ring-saffron-500'
+                        }`}
+                        placeholder="+91 98765 43210 or 98765 43210"
                       />
                     </div>
+                    {phoneError && (
+                      <p className="mt-1 text-sm text-red-600">{phoneError}</p>
+                    )}
                   </div>
                 </div>
 
@@ -258,58 +315,32 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Student Grade */}
-                  <div>
-                    <label htmlFor="studentGrade" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Student Grade/Class *
-                    </label>
-                    <div className="relative">
-                      <BookOpen className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      <select
-                        id="studentGrade"
-                        name="studentGrade"
-                        value={formData.studentGrade}
-                        onChange={handleChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 border border-sandalwood-200 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-transparent outline-none appearance-none bg-white"
-                      >
-                        <option value="">Select Grade</option>
-                        <option value="Class 1">Class 1</option>
-                        <option value="Class 2">Class 2</option>
-                        <option value="Class 3">Class 3</option>
-                        <option value="Class 4">Class 4</option>
-                        <option value="Class 5">Class 5</option>
-                        <option value="Class 6">Class 6</option>
-                        <option value="Class 7">Class 7</option>
-                        <option value="Class 8">Class 8</option>
-                        <option value="Class 9">Class 9</option>
-                        <option value="Class 10">Class 10</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Interest */}
-                  <div>
-                    <label htmlFor="interest" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Interested In *
-                    </label>
+                {/* Student Grade */}
+                <div>
+                  <label htmlFor="studentGrade" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Student Grade/Class *
+                  </label>
+                  <div className="relative">
+                    <BookOpen className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <select
-                      id="interest"
-                      name="interest"
-                      value={formData.interest}
+                      id="studentGrade"
+                      name="studentGrade"
+                      value={formData.studentGrade}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-sandalwood-200 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-transparent outline-none"
+                      className="w-full pl-10 pr-4 py-3 border border-sandalwood-200 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-transparent outline-none appearance-none bg-white"
                     >
-                      <option value="">Select Interest</option>
-                      <option value="abacus">Abacus Program</option>
-                      <option value="vedic-math">Vedic Mathematics</option>
-                      <option value="both">Both Programs</option>
-                      <option value="summer-camp">Summer Camp</option>
-                      <option value="online-abacus">Online Class Abacus</option>
-                      <option value="online-vedic">Online Class Vedic Maths</option>
-                      <option value="offline">Offline Classes</option>
+                      <option value="">Select Grade</option>
+                      <option value="Class 1">Class 1</option>
+                      <option value="Class 2">Class 2</option>
+                      <option value="Class 3">Class 3</option>
+                      <option value="Class 4">Class 4</option>
+                      <option value="Class 5">Class 5</option>
+                      <option value="Class 6">Class 6</option>
+                      <option value="Class 7">Class 7</option>
+                      <option value="Class 8">Class 8</option>
+                      <option value="Class 9">Class 9</option>
+                      <option value="Class 10">Class 10</option>
                     </select>
                   </div>
                 </div>
