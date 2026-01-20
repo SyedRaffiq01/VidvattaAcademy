@@ -6,7 +6,7 @@ A modern, elegant, responsive educational website for Vidvatta Academy, speciali
 
 - **Modern Design**: Elegant Vedic-themed design with earthy tones and premium aesthetics
 - **Fully Responsive**: Mobile-first design that works seamlessly on all devices
-- **Multiple Pages**: Home, About, Courses, Classes, Summer Camps, Grade Coverage, Testimonials, and Contact
+- **Multiple Pages**: Home, About, Courses, Classes, Summer Camps, Grade Coverage, Gallery, Testimonials, and Contact
 - **Contact Form**: Fully functional email contact form with automatic email notifications
 - **Google Maps Integration**: Embedded map showing academy location
 - **WhatsApp Integration**: Floating WhatsApp button for quick communication
@@ -84,6 +84,7 @@ vidvatta-academy/
 │   ├── contact/        # Contact page with form
 │   ├── courses/        # Courses page (Abacus & Vedic Math)
 │   ├── grades/         # Grade Coverage page
+│   ├── gallery/        # Gallery page (certificate photos)
 │   ├── summer-camps/   # Summer Camps page
 │   ├── testimonials/   # Testimonials page
 │   ├── layout.tsx      # Root layout
@@ -94,6 +95,7 @@ vidvatta-academy/
 │   ├── Footer.tsx      # Footer component
 │   └── WhatsAppButton.tsx  # Floating WhatsApp button
 ├── public/             # Static assets
+│   └── gallery/        # Gallery images (certificate photos)
 ├── .env.local          # Environment variables (not in git)
 └── package.json
 ```
@@ -132,6 +134,15 @@ vidvatta-academy/
 - Detailed breakdown for each grade level
 - Benefits at every stage
 
+### Gallery
+- **Currently Active**: Achievements & Certifications photo gallery
+- **Hidden Sections** (can be enabled if needed):
+  - Student Videos section (YouTube video embeds)
+  - Learning Moments photo gallery
+- Image lightbox modal for viewing photos
+- Images stored in `public/gallery/` folder
+- **Note**: Video and learning photos code exists in the component but sections are hidden from display
+
 ### Testimonials
 - Parent testimonials (placeholders)
 - Student success stories
@@ -164,6 +175,15 @@ Modify `tailwind.config.ts` to change the color palette.
 
 ### Adding Content
 Update respective page files in the `app/` directory.
+
+### Gallery Images
+To add certificate photos to the gallery:
+1. Place images in `public/gallery/` folder
+2. Name them as `certificate-1.jpg`, `certificate-2.jpg`, etc.
+3. Images will automatically appear in the gallery
+4. Recommended: 1200x1200px, under 500KB per image
+
+**Note**: The gallery page currently shows only certificate photos. The videos and learning moments sections are hidden but can be enabled by uncommenting the respective sections in `app/gallery/page.tsx`.
 
 ### Email Configuration
 The contact form sends emails to `Vidvatta.academy@gmail.com` by default. To change this, edit `app/api/contact/route.ts`.

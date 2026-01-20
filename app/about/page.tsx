@@ -23,7 +23,7 @@ export default function About() {
     {
       icon: Heart,
       title: 'Our Commitment',
-      description: 'We are committed to providing personalized attention, maintaining small batch sizes, and creating a nurturing environment where every student feels valued and encouraged to reach their full potential.',
+      description: 'We are committed to providing personalized attention, maintaining decent batch sizes, and creating a nurturing environment where every student feels valued and encouraged to reach their full potential.',
     },
   ];
 
@@ -63,8 +63,9 @@ export default function About() {
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
                   Drawing from the rich heritage of Vedic Mathematics - a system developed thousands of 
-                  years ago in India - combined with the proven Abacus methodology, we've created a unique 
-                  learning experience that transforms how children perceive and interact with numbers.
+                  years ago in India and the proven Abacus methodology, we offer two distinct courses 
+                  that transform how children perceive and interact with numbers. Each course is designed 
+                  to meet specific learning needs and age groups, providing a tailored approach to mathematical excellence.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
                   Today, we're proud to guide students from Class 1 to Class 10 on their mathematical 
@@ -216,11 +217,12 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="text-xl font-serif font-semibold text-vedic-maroon mb-2">
-                      Dual Methodology Approach
+                      Two Distinct Courses
                     </h3>
                     <p className="text-gray-600">
-                      We combine Abacus visualization techniques with Vedic Mathematics shortcuts, 
-                      offering students multiple pathways to solve problems and understand concepts.
+                      We offer Abacus and Vedic Mathematics as separate programs, each with unique 
+                      methodologies. Students can choose the course that best fits their age and 
+                      learning goals, or enroll in both for comprehensive mathematical development.
                     </p>
                   </div>
                 </div>
@@ -232,7 +234,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="text-xl font-serif font-semibold text-vedic-maroon mb-2">
-                      Small Batch Sizes
+                      Batch Sizes
                     </h3>
                     <p className="text-gray-600">
                       Our classes are intentionally small to ensure every student receives personalized 

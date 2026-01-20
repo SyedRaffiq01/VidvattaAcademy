@@ -5,18 +5,16 @@ export default function Classes() {
   const onlineFeatures = [
     'Live interactive sessions with real-time feedback',
     'Screen sharing and digital abacus visualization',
-    'Recorded sessions for revision',
-    'Interactive whiteboard for problem solving',
     'Small batch sizes for personalized attention',
     'Flexible scheduling to fit your timezone',
   ];
 
   const offlineFeatures = [
-    'Face-to-face learning in our modern classrooms',
+    'Face-to-face learning',
     'Hands-on practice with physical abacus tools',
     'Direct interaction with certified trainers',
     'Peer learning and group activities',
-    'Structured classroom environment',
+    'Comfortable classroom environment',
     'Regular assessments and progress tracking',
   ];
 
@@ -145,7 +143,7 @@ export default function Classes() {
                       Arehalli, Uttarahalli, Bangalore
                     </p>
                     <p className="text-xs text-gray-600">
-                      Modern, well-equipped classrooms with a conducive learning environment
+                      Comfortable classroom environment for effective learning
                     </p>
                   </div>
                 </div>
@@ -168,7 +166,7 @@ export default function Classes() {
                     <Award className="w-5 h-5 text-vedic-green mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-800">Environment</p>
-                      <p className="text-gray-600">Modern classrooms with all necessary tools</p>
+                      <p className="text-gray-600">Comfortable classroom environment</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -244,7 +242,7 @@ export default function Classes() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight via-vedic-greenLight to-vedic-green text-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight to-vedic-green text-white relative overflow-hidden">
         <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">

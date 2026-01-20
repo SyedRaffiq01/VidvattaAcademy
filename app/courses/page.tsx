@@ -72,7 +72,7 @@ export default function Courses() {
                     <Layers className="w-5 h-5 text-vedic-green mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-800">Course Structure</p>
-                      <p className="text-gray-600">8 Levels • 3 months per level</p>
+                      <p className="text-gray-600">8 Levels • Approximately 3-4 months per level</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -200,7 +200,7 @@ export default function Courses() {
                     <Layers className="w-5 h-5 text-vedic-green mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-gray-800">Course Structure</p>
-                      <p className="text-gray-600">6 Levels • 2.5 months per level</p>
+                      <p className="text-gray-600">6 Levels • Approximately 3-4 months per level</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -306,7 +306,7 @@ export default function Courses() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight via-vedic-greenLight to-vedic-green text-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight to-vedic-green text-white relative overflow-hidden">
         <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">

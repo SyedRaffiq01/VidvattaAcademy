@@ -71,7 +71,7 @@ export default function Grades() {
     {
       icon: Clock,
       title: 'Flexible Progression',
-      description: '3-4 months per level with flexible scheduling for all grades',
+      description: 'Approximately 3-4 months per level with flexible scheduling for all grades',
     },
     {
       icon: FileText,
@@ -364,7 +364,7 @@ export default function Grades() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight via-vedic-greenLight to-vedic-green text-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight to-vedic-green text-white relative overflow-hidden">
         <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <ScrollReveal>

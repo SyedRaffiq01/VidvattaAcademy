@@ -6,52 +6,49 @@ import ScrollReveal from '@/components/ScrollReveal';
 export default function Testimonials() {
   const testimonials = [
     {
-      name: 'Priya Sharma',
-      childName: 'Arjun',
-      grade: 'Class 5',
+      name: 'Deepa Devarkonda',
       rating: 5,
-      text: 'My son Arjun joined Vidvatta Academy six months ago, and the transformation is remarkable! His calculation speed has improved dramatically, and more importantly, he now enjoys math. The abacus method has boosted his confidence in all subjects. Highly recommended!',
-      location: 'Bangalore',
+      text: 'Excellent coaching for vedic maths..i enrolled my kids as they r struggling for multiplication..now they r happy to solve mathematics solutions...thanku aishwarya madam for ur friendly teaching...',
     },
     {
-      name: 'Rajesh Kumar',
-      childName: 'Sneha',
-      grade: 'Class 8',
+      name: 'Shruthi Balu',
       rating: 5,
-      text: 'The Vedic Mathematics course has been a game-changer for my daughter. She&apos;s participating in math competitions now and solving problems in seconds that used to take minutes. The teachers are patient, dedicated, and make learning enjoyable. Thank you, Vidvatta Academy!',
-      location: 'Bangalore',
+      text: 'Found this place when I was looking to enroll my kid for abacus. The teachers here are very good, interactive and deal with kids patiently. My daughter enjoys the class thoroughly. Thank you Vidvatta Academy.',
     },
     {
-      name: 'Meera Reddy',
-      childName: 'Kavya',
-      grade: 'Class 3',
+      name: 'Shreenivas Hegde',
       rating: 5,
-      text: 'We enrolled Kavya in online classes during the pandemic, and it&apos;s been excellent! The interactive sessions keep her engaged, and we&apos;ve noticed improved concentration and focus across all subjects. The flexible timings work perfectly with our schedule.',
-      location: 'Bangalore',
+      text: 'I was very much satisfied with Vedic maths Class as off now , my son learning here. Especially with the way of teaching, they gave individual attention . The teachers patience is highly appreciable. I always received prompt friendly replies from Sushma & Aishwarya… thanks a lot',
     },
     {
-      name: 'Anjali Patel',
-      childName: 'Rohan',
-      grade: 'Class 6',
+      name: 'Bavdeep Boj',
       rating: 5,
-      text: 'The summer camp was amazing! Rohan not only learned valuable math skills but also made new friends. The blend of learning and fun activities kept him engaged throughout. He&apos;s now enrolled in regular classes and looks forward to every session!',
-      location: 'Bangalore',
+      text: 'Very good experience for Vedic math and Abacus.My kids are really enjoying the classes.Even teachers also very cooperative. My kids are eagerly waiting for the classes Thank you Sushma and Aishwarya ..,,',
     },
     {
-      name: 'Vikram Singh',
-      childName: 'Aditi',
-      grade: 'Class 9',
+      name: 'Kalpana Raju',
       rating: 5,
-      text: 'As we prepare for board exams, the Vedic Mathematics techniques have been invaluable. Aditi can solve complex algebra problems much faster now, giving her more time for other subjects. The competitive exam preparation techniques are exactly what we needed.',
-      location: 'Bangalore',
+      text: 'I was very much satisfied with both of my kids learning here. Especially with the way of teaching, they gave individual attention for each and every students.The teachers patience is highly appreciable. I always received prompt friendly replies from my tutor.',
     },
     {
-      name: 'Deepa Nair',
-      childName: 'Vivaan',
-      grade: 'Class 4',
+      name: 'Swapna vaddi',
       rating: 5,
-      text: 'The offline classes at Vidvatta Academy are well-structured with excellent infrastructure. The small batch size ensures personalized attention, and Vivaan receives feedback immediately. He looks forward to every class. This is a great investment in his future!',
-      location: 'Bangalore',
+      text: 'I am very happy with the way Vidvatta Academy was taking th abacus classes. I enrolled both my kids to abacus classes. Sushma mam is such a wonderful teacher. She is very soft and her gentle nature is very much appreciatable. Would highly recommend vidvatta academy services. Thank you sushma mam for your services',
+    },
+    {
+      name: 'Reshika Sureshbabu',
+      rating: 5,
+      text: 'Hello all, Vidvatta academy has a friendly atmosphere for kids to learn. My daughter goes for abacus classes. Teachers are kind and approachable. I would recommend anyone to go join your kid to improve their love on Maths.',
+    },
+    {
+      name: 'Vishalakshi bk Nesara',
+      rating: 5,
+      text: 'We have joined our daughter to the abacus class in vidvatta Academy since one year. My daughter was interested in math when we joined her academy then she liked maths & she started self studying. In this academy the teacher treats children like their own children. They are bringing a Positive bonding with children & parents also. They have good communication with parents also. In the academy teachers are supportive & they keep attention for each student individually.',
+    },
+    {
+      name: 'Anil Kumar G',
+      rating: 5,
+      text: 'My kid has been practicing abacus in this academy from past 6 months. They have been very good with their curriculum along with other communication. She has improved her mathematical ability and has been able solve problems at better rate with almost minimal errors now',
     },
   ];
 
@@ -100,79 +97,14 @@ export default function Testimonials() {
                         <div>
                           <p className="font-semibold text-vedic-maroon">{testimonial.name}</p>
                           <p className="text-sm text-gray-600">
-                            Parent of {testimonial.childName} ({testimonial.grade})
+                            Parent
                           </p>
-                          <p className="text-xs text-gray-500">{testimonial.location}</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </ScrollReveal>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories Section */}
-      <section className="py-16 bg-gradient-to-br from-sandalwood-50 to-white vedic-bg-pattern">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-vedic-maroon mb-12">
-              Student Success Stories
-            </h2>
-            <div className="space-y-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-sandalwood-100">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-saffron-100 p-3 rounded-full">
-                    <Star className="w-6 h-6 text-saffron-700" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-serif font-semibold text-vedic-maroon mb-2">
-                      Olympiad Achievement
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      One of our students secured a gold medal in the International Math Olympiad 
-                      after completing our Vedic Mathematics program. The speed techniques learned 
-                      here proved invaluable during the competition.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-sandalwood-100">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-vedic-green/20 p-3 rounded-full">
-                    <Star className="w-6 h-6 text-vedic-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-serif font-semibold text-vedic-maroon mb-2">
-                      Board Exam Excellence
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      A Class 10 student improved from 65% to 95% in mathematics after joining our 
-                      program. The confidence and techniques gained helped excel not just in math, 
-                      but across all subjects.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-sandalwood-100">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-vedic-maroon/10 p-3 rounded-full">
-                    <Star className="w-6 h-6 text-vedic-maroon" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-serif font-semibold text-vedic-maroon mb-2">
-                      Confidence Transformation
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      A shy Class 3 student who was afraid of math is now the first to volunteer 
-                      for math problems in class. The abacus training helped build confidence that 
-                      extends beyond academics.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

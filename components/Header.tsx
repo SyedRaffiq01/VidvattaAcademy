@@ -15,6 +15,7 @@ export default function Header() {
     { href: '/classes', label: 'Online & Offline' },
     { href: '/summer-camps', label: 'Summer Camps' },
     { href: '/grades', label: 'Grade Coverage' },
+    { href: '/gallery', label: 'Gallery' },
     { href: '/testimonials', label: 'Testimonials' },
     { href: '/contact', label: 'Contact' },
   ];

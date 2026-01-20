@@ -51,6 +51,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/gallery" className="text-sandalwood-100 hover:text-vedic-gold transition-colors text-sm md:text-base font-medium">
+                  Gallery
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-sandalwood-100 hover:text-vedic-gold transition-colors text-sm md:text-base font-medium">
                   Contact Us
                 </Link>
