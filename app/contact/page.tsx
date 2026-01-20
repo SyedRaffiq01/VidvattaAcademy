@@ -379,7 +379,7 @@ export default function Contact() {
                           <span className="text-white text-lg font-bold">✓</span>
                         </div>
                         <span className="text-center">
-                          Enquiry has been submitted successfully.<br />
+                          Inquiry has been submitted successfully.<br />
                           <span className="text-sm">The team will reach out to you shortly.</span>
                         </span>
                       </>
@@ -447,7 +447,7 @@ export default function Contact() {
       </section>
 
       {/* Quick Action CTA */}
-      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight via-vedic-greenLight to-vedic-green text-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-vedic-maroon via-vedic-maroonLight to-vedic-green text-white relative overflow-hidden">
         <div className="absolute inset-0 vedic-bg-pattern opacity-5"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
@@ -460,7 +460,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+917892505452"
-              className="inline-block bg-saffron-600 hover:bg-saffron-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+              className="bg-saffron-600 hover:bg-saffron-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
