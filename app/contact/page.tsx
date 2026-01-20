@@ -49,6 +49,21 @@ export default function Contact() {
     const form = e.currentTarget;
     const formDataToSubmit = new FormData(form);
     
+    // Add IST timestamp
+    const now = new Date();
+    const istTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+    const istTimestamp = istTime.toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+    formDataToSubmit.append('Submission Time (IST)', istTimestamp);
+    
     // Add FormSubmit specific fields
     formDataToSubmit.append('_subject', `New Inquiry: ${formData.inquiryType} - ${formData.name}`);
     formDataToSubmit.append('_template', 'table');
