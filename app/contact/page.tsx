@@ -49,21 +49,6 @@ export default function Contact() {
     const form = e.currentTarget;
     const formDataToSubmit = new FormData(form);
     
-    // Add IST timestamp
-    const now = new Date();
-    const istTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
-    const istTimestamp = istTime.toLocaleString('en-IN', {
-      timeZone: 'Asia/Kolkata',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true
-    });
-    formDataToSubmit.append('Submission Time (IST)', istTimestamp);
-    
     // Add FormSubmit specific fields
     formDataToSubmit.append('_subject', `New Inquiry: ${formData.inquiryType} - ${formData.name}`);
     formDataToSubmit.append('_template', 'table');
@@ -390,8 +375,13 @@ export default function Contact() {
                       </>
                     ) : formStatus === 'success' ? (
                       <>
-                        <span>✓</span>
-                        <span>Message Sent Successfully! Check your email for confirmation.</span>
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-lg font-bold">✓</span>
+                        </div>
+                        <span className="text-center">
+                          Enquiry has been submitted successfully.<br />
+                          <span className="text-sm">The team will reach out to you shortly.</span>
+                        </span>
                       </>
                     ) : formStatus === 'error' ? (
                       <>
